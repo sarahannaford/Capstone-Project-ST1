@@ -168,7 +168,7 @@ class CVD_GUI:
         average_score = ((math_score + writing_score + reading_score)/3)
 
         result_string += 'Student Performance Predicition\n'
-        student_info = (student_gender, student_race, parent_educ, student_lunch, student_course)
+        student_info = (student_gender, student_race, parent_educ, student_lunch, student_course, average_score)
 
         test_predict = best_model.predict ([student_info])
         disp_string = ("This model has a prediction accuracy of: ", str(model_accuracy))
