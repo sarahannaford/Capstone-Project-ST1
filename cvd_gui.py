@@ -182,7 +182,7 @@ class CVD_GUI:
 
         result = test_predict
 
-        if(test_predict == [1]):
+        if(result == [1]):
             result_string = (disp_string, '\n, You will pass the unit')
         else:
             result_string = (disp_string, '\n You will not pass the unit')
