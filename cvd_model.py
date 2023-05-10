@@ -36,7 +36,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import ExtraTreesClassifier
 
 # Data file import
-test_data = pd.read_csv("/Users/sarahannaford/Desktop/UC Folders/Software Tech/Capstone Project/exams.csv")
+test_data = pd.read_csv("exams.csv")
 
 
 # Attribute to be predicted
