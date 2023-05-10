@@ -162,14 +162,20 @@ class CVD_GUI:
             student_course = 1.0
 
         math_score = self.math_entry.get()
+        norm_math = ((math_score - 15)/(100-15))
+        
         writing_score = self.write_entry.get()
+        norm_write = ((writing_score - 15)/(100-15))
+        
         reading_score = self.write_entry.get()
+        norm_read = ((reading_score - 25)/(100-25))
 
-        average_score = ((math_score + writing_score + reading_score)/3)
+        average_score = ((norm_math + norm_write + norm_read)/3)
 
         result_string += 'Student Performance Predicition\n'
-        student_info = (student_gender, student_race, parent_educ, student_lunch, student_course, 
-                        math_score, writing_score, reading_score, average_score)
+        student_info = (student_gender, student_race, parent_educ,\
+                        student_lunch, student_course, math_score,\
+                        writing_score, reading_score, average_score)
 
         test_predict = best_model.predict ([student_info])
         disp_string = ("This model has a prediction accuracy of: ", str(model_accuracy))
